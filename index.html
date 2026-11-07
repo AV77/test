@@ -5,53 +5,36 @@
   <title>My Presentation</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-  <!-- Reveal.js Core CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/reset.css">
-  <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/reveal.css">
-  
-  <!-- Choose a theme: black, white, league, beige, sky, night, serif, simple, solarized -->
-  <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/theme/black.css">
+  <!-- Reveal.js Core CSS (via cdnjs) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reset.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reveal.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/theme/black.min.css">
 </head>
 <body>
 
   <div class="reveal">
     <div class="slides">
       
-      <!-- Slide 1 -->
       <section>
         <h2>Slide 1: Intro</h2>
         <p>This is the main screen.</p>
-        
-        <!-- Speaker Notes -->
         <aside class="notes">
           These are notes for Slide 1.<br>
           Only the presenter sees this.
         </aside>
       </section>
 
-      <!-- Slide 2 -->
-      <section>
-        <h2>Slide 2: Details</h2>
-        <p>Press 'S' to open the speaker window.</p>
-        
-        <!-- Speaker Notes -->
-        <aside class="notes">
-          Remember to mention the CDN part here!
-        </aside>
-      </section>
-
     </div>
   </div>
 
-  <!-- Reveal.js Core JS -->
-  <script src="https://unpkg.com/reveal.js/dist/reveal.js"></script>
-  <!-- Reveal.js Notes Plugin -->
-  <script src="https://unpkg.com/reveal.js/plugin/notes/notes.js"></script>
+  <!-- Reveal.js Core JS & Notes Plugin (via cdnjs) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reveal.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/plugin/notes/notes.min.js"></script>
 
   <script>
     Reveal.initialize({
       hash: true,
-      // Load the notes plugin
+      // The plugin will now load correctly
       plugins: [ RevealNotes ]
     });
   </script>
