@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electrolytes — The Electrical Language of the Body</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/black.css">
+<style>
+:root{--bg:#101114;--panel:#1a1c21;--orange:#ff8a00;--yellow:#ffc45c;--muted:#a9adb7;--white:#f6f7fa;--line:#343740;--blue:#62b5ff;--green:#65d6a0;--red:#ff7373}
+.reveal{font-family:Inter,Arial,sans-serif;color:var(--white);font-size:28px}
+.reveal .slides{text-align:left}
+.reveal h1,.reveal h2,.reveal h3{font-family:Inter,Arial,sans-serif;text-transform:none;letter-spacing:-.035em;color:var(--white);font-weight:800}
+.reveal h1{font-size:2.25em}.reveal h2{font-size:1.55em}.reveal h3{font-size:.9em;color:var(--yellow)}
+.reveal p,.reveal li{line-height:1.35}.reveal ul{margin-top:.25em}
+.eyebrow{color:var(--orange);font-size:.48em;letter-spacing:.16em;text-transform:uppercase;font-weight:800;margin-bottom:1em}
+.sub{color:var(--muted);font-size:.72em}
+.accent{color:var(--orange)} .yellow{color:var(--yellow)} .blue{color:var(--blue)} .green{color:var(--green)} .red{color:var(--red)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px 26px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.kicker{font-size:.58em;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}
+.big{font-size:2.1em;font-weight:850;line-height:1;color:var(--orange)}
+.pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:7px 13px;font-size:.52em;color:var(--muted);margin:4px}
+.flow{display:flex;align-items:center;justify-content:center;gap:12px;margin:24px 0;flex-wrap:wrap}
+.node{background:#22252c;border:1px solid #454954;border-radius:12px;padding:14px 18px;text-align:center;font-size:.7em;min-width:115px}
+.arrow{color:var(--orange);font-size:1.3em}
+.note{border-left:4px solid var(--orange);padding:10px 18px;background:#1c1e23;border-radius:0 12px 12px 0;font-size:.72em;color:#e7e8eb}
+.small{font-size:.62em;color:var(--muted)}
+table{width:100%;border-collapse:collapse;font-size:.65em}
+td,th{border-bottom:1px solid var(--line);padding:10px 12px;text-align:left}
+th{color:var(--yellow)}
+.phase{display:flex;gap:10px;align-items:center;margin:12px 0}
+.phase b{width:34px;height:34px;border-radius:50%;background:var(--orange);color:#111;display:grid;place-items:center;font-size:.7em}
+.phase span{font-size:.68em}
+.bar{height:12px;border-radius:20px;background:#30343d;overflow:hidden;margin:10px 0}
+.bar i{display:block;height:100%;background:var(--orange)}
+.reveal .progress{color:var(--orange);height:4px}
+.reveal .controls{color:var(--orange)}
+.reveal .slide-number{color:var(--muted);font-size:13px}
+.center{text-align:center}
+svg{max-width:100%;height:auto}
+.axis{stroke:#888;stroke-width:2;fill:none}.curve{stroke:var(--orange);stroke-width:5;fill:none;stroke-linecap:round;stroke-linejoin:round}
+@media(max-width:700px){.grid,.grid3{grid-template-columns:1fr}.reveal{font-size:20px}}
+</style>
+</head>
+<body>
+<div class="reveal"><div class="slides">
+
+<section data-background="#101114">
+ <div class="eyebrow">A 10-minute physiology-to-clinic introduction</div>
+ <h1>Electrolytes<span class="accent">.</span><br><span class="sub">The electrical language of the body</span></h1>
+ <p class="sub">From membrane potential to clinical consequences</p>
+ <div style="margin-top:2em"><span class="pill">Na⁺</span><span class="pill">K⁺</span><span class="pill">Ca²⁺</span><span class="pill">Cl⁻</span></div>
+ <aside class="notes">Opening: “Before we discuss electrolyte disorders, let’s understand what these ions are doing in a normal cell.”</aside>
+</section>
+
+<section>
+ <div class="eyebrow">The playlist</div><h2>Six short chapters. One clinical question.</h2>
+ <div class="grid3">
+  <div class="card"><div class="kicker">01</div><h3>The Electrical Nature of Life</h3><p class="small">Resting potential and action potential</p></div>
+  <div class="card"><div class="kicker">02</div><h3>The Sodium–Potassium Connection</h3><p class="small">Gradients and the Na⁺/K⁺ pump</p></div>
+  <div class="card"><div class="kicker">03</div><h3>Calcium: The Contraction Switch</h3><p class="small">Muscle and synaptic function</p></div>
+  <div class="card"><div class="kicker">04</div><h3>Chloride: The Silent Regulator</h3><p class="small">Inhibition and fluid balance</p></div>
+  <div class="card"><div class="kicker">05</div><h3>Your Heart Runs on Electricity</h3><p class="small">Cardiac electrical activity</p></div>
+  <div class="card" style="border-color:var(--orange)"><div class="kicker accent">06 · FINALE</div><h3>When the Balance Breaks</h3><p class="small">Why the physiology matters clinically</p></div>
+ </div>
+ <aside class="notes">This is a visual catalogue, not six separate long lectures. Move briskly; reserve the most time for the final clinical section.</aside>
+</section>
+
+<section>
+ <div class="eyebrow">01 · The Electrical Nature of Life</div><h2>A cell is not electrically neutral across its membrane.</h2>
+ <div class="grid">
+  <div class="card"><div class="big">−</div><h3>Resting membrane potential</h3><p class="small">A voltage difference between the inside and outside of the cell membrane.</p></div>
+  <div class="card"><div class="big">⚡</div><h3>Why it exists</h3><ul><li>Unequal ion distribution</li><li>Selective membrane permeability</li><li>Active transport maintains gradients</li></ul></div>
+ </div>
+ <p class="note">For a typical neuron, the resting membrane potential is commonly taught as approximately <b>−70 mV</b> (the exact value varies by cell type).</p>
+ <aside class="notes">“Resting” does not mean inactive. Ions are distributed unequally, and the membrane is selectively permeable.</aside>
+</section>
+
+<section>
+ <div class="eyebrow">01 · Resting state</div><h2>The ion distribution is unequal.</h2>
+ <div class="grid">
+  <div class="card"><h3>Outside the cell</h3><p><span class="blue">Na⁺</span> relatively high</p><p><span class="blue">Cl⁻</span> relatively high</p><p><span class="yellow">Ca²⁺</span> free concentration much higher than inside</p></div>
+  <div class="card"><h3>Inside the cell</h3><p><span class="green">K⁺</span> relatively high</p><p>Large negatively charged proteins and other anions</p><p>Free Ca²⁺ kept very low</p></div>
+ </div>
+ <p class="note">The resting potential is strongly influenced by potassium permeability in many neurons.</p>
+ <aside class="notes">Emphasize relative concentrations, not absolute absence/presence. Chloride distribution differs by cell type and developmental state.</aside>
+</section>
+
+<section>
+ <div class="eyebrow">01 · Action potential</div><h2>A rapid, temporary change in membrane voltage.</h2>
+ <p>An action potential is a brief reversal and recovery of membrane polarity that allows an electrical signal to travel along an excitable membrane.</p>
+ <div class="flow"><div class="node">Resting state</div><div class="arrow">→</div><div class="node">Threshold</div><div class="arrow">→</div><div class="node">Action potential</div><div class="arrow">→</div><div class="node">Recovery</div></div>
+ <p class="small">The sequence below describes a typical neuronal action potential—not every excitable cell.</p>
+ <aside class="notes">Define it clearly. Threshold is the level at which regenerative opening of voltage-gated sodium channels produces the all-or-none response.</aside>
+</section>
+
+<section>
+ <div class="eyebrow">01 · Phases of a neuronal action potential</div><h2>Four key events.</h2>
+ <div class="phase"><b>1</b><span><b>Threshold:</b> depolarization reaches the level that triggers the regenerative response.</span></div>
+ <div class="phase"><b>2</b><span><b>Depolarization:</b> voltage-gated Na⁺ channels open; Na⁺ enters and the membrane potential becomes more positive.</span></div>
+ <div class="phase"><b>3</b><span><b>Repolarization:</b> Na⁺ channels inactivate and K⁺ conductance rises; K⁺ leaves the cell.</span></div>
+ <div class="phase"><b>4</b><span><b>After-hyperpolarization:</b> K⁺ conductance remains elevated briefly; the membrane returns to its resting level.</span></div>
+ <aside class="notes">The sodium-potassium pump does not cause the rapid repolarization of each individual action potential. It helps maintain the gradients over time.</aside>
+</section>
+
+<section>
+ <div class="eyebrow">01 · The action potential curve</div><h2>Voltage changes over milliseconds.</h2>
+ <svg viewBox="0 0 800 390" role="img" aria-label="Schematic neuronal action potential curve">
+  <path class="axis" d="M70 25 V330 H770"/><path class="axis" d="M70 220 H770" stroke-dasharray="5 6"/>
+  <path class="curve" d="M75 220 C150 220 205 220 245 215 C270 210 280 145 300 65 C320 5 345 55 365 105 C390 175 410 220 450 250 C480 280 510 250 540 225 C590 220 670 220 760 220"/>
+  <path d="M245 25 V330 M365 25 V330 M450 25 V330" stroke="#454954" stroke-dasharray="4 7"/>
+  <g fill="#f6f7fa" font-size="18"><text x="5" y="38">+30</text><text x="15" y="225">−70</text><text x="15" y="335">−90</text><text x="70" y="365">Time →</text><text x="255" y="300" fill="#ffc45c">Depolarization</text><text x="375" y="145" fill="#62b5ff">Repolarization</text><text x="475" y="310" fill="#65d6a0">After-</text><text x="475" y="332" fill="#65d6a0">hyperpolarization</text></g>
+ </svg>
+ <p class="small">Schematic only; values and shape vary with cell type and recording conditions.</p>
+ <aside class="notes">Point to the upstroke, downstroke and undershoot. Explain the ion movements rather than asking the audience to memorize the curve alone.</aside>
+</section>
+
+<section>
+ <div class="eyebrow">01 · All-or-none & refractory periods</div><h2>Threshold determines whether a full action potential occurs.</h2>
+ <div class="grid">
+  <div class="card"><h3>All-or-none law</h3><p>If threshold is reached, a full action potential is generated. A stronger stimulus does not make that action potential taller; it can increase firing frequency.</p></div>
+  <div class="card"><h3>Refractory period</h3><p><b>Absolute:</b> another action potential cannot be initiated.</p><p><b>Relative:</b> another can occur, but a stronger-than-usual stimulus is needed.</p></div>
+ </div>
+ <aside class="notes">Absolute refractoriness is associated with inactivated voltage-gated Na channels. Relative refractoriness occurs during recovery, often while the membrane is hyperpolarized.</aside>
+</section>
+
+<section>
+ <div class="eyebrow">02 · Sodium & potassium</div><h2>The voltage duo.</h2>
+ <div class="grid">
+  <div class="card"><div class="big blue">Na⁺</div><h3>Major extracellular cation</h3><ul><li>Important determinant of extracellular fluid osmolality</li><li>Inward Na⁺ current drives neuronal depolarization</li></ul></div>
+  <div class="card"><div class="big green">K⁺</div><h3>Major intracellular cation</h3><ul><li>Major influence on resting membrane potential</li><li>Outward K⁺ current contributes to repolarization</li></ul></div>
+ </div>
+ <aside class="notes">Sodium concentration in plasma is closely related to water balance. Potassium is especially important for excitability of nerve and muscle, including cardiac muscle.</aside>
+</section>
+
+<section>
+ <div class="eyebrow">02 · The sodium–potassium pump</div><h2>Gradients need maintenance.</h2>
+ <div class="flow"><div class="node"><span class="blue">3 Na⁺</span><br>out</div><div class="arrow">↔</div><div class="node" style="border-color:var(--orange)">Na⁺/K⁺<br>ATPase<br><span class="small">uses ATP</span></div><div class="arrow">↔</div><div class="node"><span class="green">2 K⁺</span><br>in</div></div>
+ <p>The pump transports <b>three sodium ions out</b> for every <b>two potassium ions in</b>, using energy from ATP.</p>
+ <p class="note">It maintains the concentration gradients that make repeated electrical signalling possible; it is not the fast mechanism of the action-potential upstroke or downstroke.</p>
+ <aside class="notes">This is primary active transport. Keep the distinction between maintaining gradients and the rapid channel-mediated currents very clear.</aside>
+</section>
+
+<section>
+ <div class="eyebrow">03 · Calcium</div><h2>Calcium links electrical signals to cellular action.</h2>
+ <div class="grid3">
+  <div class="card"><div class="big yellow">01</div><h3>Muscle</h3><p class="small">A rise in intracellular Ca²⁺ enables the contractile process.</p></div>
+  <div class="card"><div class="big yellow">02</div><h3>Synapse</h3><p class="small">Ca²⁺ entry at nerve terminals triggers neurotransmitter release.</p></div>
+  <div class="card"><div class="big yellow">03</div><h3>Heart</h3><p class="small">Ca²⁺ entry contributes to the cardiac action-potential plateau and contraction.</p></div>
+ </div>
+ <p class="note">Free cytosolic calcium is kept very low at rest; controlled changes in its concentration act as an intracellular signal.</p>
+ <aside class="notes">This is the “contraction switch” idea. Calcium is also important in many other cellular processes, but keep the seminar focused.</aside>
+</section>
+
+<section>
+ <div class="eyebrow">04 · Chloride</div><h2>Chloride is more than a number on a lab report.</h2>
+ <div class="grid">
+  <div class="card"><h3>Fluid & electrical balance</h3><p>Cl⁻ is the major extracellular anion and contributes to electroneutrality and fluid distribution.</p></div>
+  <div class="card"><h3>Neural inhibition</h3><p>Cl⁻ conductance through GABA<sub>A</sub> receptors commonly contributes to inhibitory signalling in the mature central nervous system.</p></div>
+ </div>
+ <p class="note">The effect of chloride movement on membrane voltage depends on the chloride gradient and the cell type.</p>
+ <aside class="notes">Avoid saying chloride always moves into neurons or always hyperpolarizes them. Its direction and effect depend on the chloride equilibrium potential.</aside>
+</section>
+
+<section>
+ <div class="eyebrow">05 · Your heart runs on electricity</div><h2>Cardiac muscle has its own action-potential pattern.</h2>
+ <div class="grid">
+  <div class="card"><h3>Working ventricular muscle</h3><p><b>Phase 0:</b> rapid Na⁺ entry</p><p><b>Phase 1:</b> brief early repolarization</p><p><b>Phase 2:</b> plateau, with Ca²⁺ entry balanced by K⁺ movement</p><p><b>Phase 3:</b> K⁺-mediated repolarization</p><p><b>Phase 4:</b> resting membrane potential</p></div>
+  <div class="card"><h3>Why the plateau matters</h3><p>It prolongs the cardiac action potential and refractory period, helping prevent sustained tetanic contraction of the heart muscle.</p><div class="pill">Na⁺</div><div class="pill">Ca²⁺</div><div class="pill">K⁺</div></div>
+ </div>
+ <aside class="notes">This is the ventricular contractile-cell action potential. Pacemaker cells have a different pattern. Do not mix their phases with the neuronal action potential.</aside>
+</section>
+
+<section>
+ <div class="eyebrow">05 · From cells to ECG</div><h2>Electrical activity becomes clinically visible.</h2>
+ <div class="card">
+  <svg viewBox="0 0 800 180" aria-label="Schematic ECG waveform">
+   <path d="M20 100 H150 L175 92 L195 100 H270 L295 35 L320 145 L345 100 H430 Q485 35 540 100 H780" fill="none" stroke="#ff8a00" stroke-width="5" stroke-linejoin="round"/>
+   <path d="M20 100 H780" stroke="#555" stroke-dasharray="5 8"/>
+  </svg>
+  <div class="grid3"><div><h3>P wave</h3><p class="small">Atrial depolarization</p></div><div><h3>QRS complex</h3><p class="small">Ventricular depolarization</p></div><div><h3>T wave</h3><p class="small">Ventricular repolarization</p></div></div>
+ </div>
+ <p class="small">Schematic ECG only. The ECG records summed electrical activity; it is not a direct recording of a single cell's action potential.</p>
+ <aside class="notes">Use this slide to connect ion movement and cardiac electrical activity to a familiar clinical investigation.</aside>
+</section>
+
+<section data-background="#17130e">
+ <div class="eyebrow">06 · When the Balance Breaks</div>
+ <h1 class="accent">The physiology becomes clinical medicine.</h1>
+ <p class="sub">Electrolyte disturbances can alter cell excitability, fluid distribution and organ function.</p>
+ <div class="flow"><div class="node">Ion disturbance</div><div class="arrow">→</div><div class="node">Altered cell function</div><div class="arrow">→</div><div class="node">Clinical effects</div></div>
+ <aside class="notes">Slow down here. This is the key section. “The earlier slides explain the normal system; now we see why clinicians care when it changes.”</aside>
+</section>
+
+<section>
+ <div class="eyebrow">06 · Potassium imbalance</div><h2>Potassium disturbances can affect neuromuscular and cardiac function.</h2>
+ <div class="grid">
+  <div class="card"><h3 class="blue">Hypokalaemia</h3><p>Low extracellular K⁺ can cause muscle weakness and alter cardiac repolarization.</p><p class="small">ECG associations can include flattened T waves and U waves.</p></div>
+  <div class="card"><h3 class="red">Hyperkalaemia</h3><p>High extracellular K⁺ can disturb membrane excitability and cardiac conduction.</p><p class="small">ECG changes can include tall peaked T waves, PR prolongation and QRS widening as severity increases.</p></div>
+ </div>
+ <p class="note">Either disturbance can be clinically important because serious cardiac rhythm abnormalities may occur.</p>
+ <aside class="notes">Do not imply every patient follows a textbook ECG sequence. ECG findings vary, and a normal ECG does not reliably exclude a dangerous potassium abnormality.</aside>
+</section>
+
+<section>
+ <div class="eyebrow">06 · Sodium imbalance</div><h2>Sodium disorders are closely linked to water balance.</h2>
+ <div class="grid">
+  <div class="card"><h3 class="blue">Hyponatraemia</h3><p>Low plasma sodium concentration usually reflects excess water relative to exchangeable body sodium and potassium.</p><p class="small">A fall in extracellular osmolality can cause water to move into brain cells, producing neurological symptoms.</p></div>
+  <div class="card"><h3 class="red">Hypernatraemia</h3><p>High plasma sodium concentration usually reflects a deficit of water relative to body solute.</p><p class="small">Increased extracellular osmolality draws water out of brain cells and can cause neurological dysfunction.</p></div>
+ </div>
+ <aside class="notes">Avoid describing sodium concentration as simply “the amount of sodium in the body.” It is strongly influenced by the relationship between body solute and water.</aside>
+</section>
+
+<section>
+ <div class="eyebrow">06 · Calcium & chloride</div><h2>Different ions, different clinical patterns.</h2>
+ <div class="grid">
+  <div class="card"><h3 class="yellow">Calcium</h3><p><b>Low calcium:</b> increased neuromuscular excitability; may cause tingling, cramps, tetany and, in significant cases, seizures or cardiac effects.</p><p><b>High calcium:</b> may cause gastrointestinal, renal, neurological and cardiovascular effects.</p></div>
+  <div class="card"><h3 class="blue">Chloride</h3><p>Chloride abnormalities often accompany changes in sodium, water balance and acid–base status.</p><p>Low chloride may occur with metabolic alkalosis; high chloride may occur in some forms of metabolic acidosis.</p></div>
+ </div>
+ <aside class="notes">Keep the chloride section proportionate: its clinical interpretation is often contextual, alongside sodium and bicarbonate/acid-base assessment.</aside>
+</section>
+
+<section>
+ <div class="eyebrow">06 · The clinical takeaway</div><h2>One disturbance can affect more than one system.</h2>
+ <div class="grid3">
+  <div class="card"><h3>Nervous system</h3><p class="small">Confusion, altered consciousness, seizures or altered neuromuscular excitability, depending on the disturbance.</p></div>
+  <div class="card"><h3>Muscles</h3><p class="small">Weakness, cramps, altered reflexes or tetany in relevant electrolyte disorders.</p></div>
+  <div class="card"><h3>Heart</h3><p class="small">Changes in conduction and repolarization; potentially serious arrhythmias, particularly with potassium abnormalities.</p></div>
+ </div>
+ <p class="note">Clinical interpretation depends on the ion involved, the magnitude and speed of change, the underlying cause and the patient's overall condition.</p>
+ <aside class="notes">This is the central clinical message. Electrolytes are not isolated lab values; they are part of the physiology of excitable tissues and fluid balance.</aside>
+</section>
+
+<section data-background="#17130e">
+ <div class="eyebrow">The hand-off</div><h1>From normal physiology<br>to <span class="accent">potassium disorders.</span></h1>
+ <p class="sub">Now that we understand why potassium matters to membrane potential and cardiac electrical activity, we can examine what happens when potassium is too low—or too high.</p>
+ <div class="pill">Hypokalaemia</div><div class="pill">Hyperkalaemia</div>
+ <aside class="notes">Transition to the next presenter: “With that foundation, let's move from the physiology of potassium to the clinical features and approach to hypokalaemia and hyperkalaemia.”</aside>
+</section>
+
+<section>
+ <div class="eyebrow">Textbook basis & scope</div><h2>References used to frame the content</h2>
+ <div class="card">
+  <p><b>Guyton and Hall, Textbook of Medical Physiology</b></p>
+  <p class="small">Relevant subject areas: membrane transport; resting membrane potential and action potentials; nerve and muscle excitation; cardiac action potentials and ECG.</p>
+  <hr style="border-color:var(--line)">
+  <p><b>Davidson’s Principles and Practice of Medicine</b></p>
+  <p class="small">Relevant subject areas: clinical biochemistry and metabolic medicine; fluid, electrolyte and acid–base disorders; renal and cardiovascular consequences.</p>
+ </div>
+ <p class="small">This is an original teaching summary, not a reproduction or a verified page-by-page transcription. Edition-specific wording, ranges and details should be checked against the copies used by your department.</p>
+ <aside class="notes">Because the exact editions were not supplied, do not claim page-specific citations. Add edition, chapter and page numbers from your own copies if your faculty requires them.</aside>
+</section>
+
+</div></div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
+<script>
+Reveal.initialize({
+ hash:true, slideNumber:'c/t', progress:true, controls:true, center:false,
+ transition:'fade', backgroundTransition:'fade', width:1280, height:720,
+ margin:0.06, navigationMode:'linear',
+ plugins:[]
+});
+</script>
+</body></html>
